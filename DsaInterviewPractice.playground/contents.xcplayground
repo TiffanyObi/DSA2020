@@ -10,5 +10,9 @@
         <page name='isOneBitCharacter'/>
         <page name='returnIndex'/>
         <page name='BINARYSEARCH'/>
+        <page name='twoSums'/>
+        <page name='reverseStringInts'/>
+        <page name='numberOfRecentCalls'/>
+        <page name='optimizedQueues'/>
     </pages>
 </playground>

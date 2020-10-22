@@ -77,6 +77,7 @@ struct Queue<T>{
 }
 
 var newQueue = Queue<Int>()
+
 newQueue.enqueue(7)
 newQueue.enqueue(6)
 print(newQueue.description)
@@ -92,4 +93,7 @@ newQueue.dequeue()
 newQueue.dequeue()
 newQueue.dequeue()
 print(newQueue.description)
-
+newQueue.dequeue()
+newQueue.dequeue()
+newQueue.dequeue()
+print(newQueue.description)

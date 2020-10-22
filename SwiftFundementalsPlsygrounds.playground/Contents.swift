@@ -16,15 +16,8 @@ print(printUpToTenString())
 func printEven() -> String {
     var string = ""
     let range = Array(5...51)
-    for (index,num) in range.enumerated() {
-        if num % 2 == 0 {
-            if index == (range.count - 2) {
-                string.append("\(num)")
-            } else {
-                string.append("\(num),")
-            }
-        }
-        
+    for (_,num) in range.enumerated() where num % 2 == 0 {
+    string += "\(num) "
     }
     return string
 }
@@ -34,10 +27,8 @@ print(printEven())
 func printAllFour() -> String {
     let range = Array(1...60)
     var string = ""
-    for num in range {
-        if num % 10 == 4 {
-            string.append("\(num) ")
-        }
+    for (_,num) in range.enumerated() where num % 10 == 4 {
+     string.append("\(num) ")
     }
     return string
 }
@@ -52,6 +43,14 @@ func printCharactersInString(_ input:String){
 
 //let inputString = "Hello world!"
 //printCharactersInString(inputString)
+
+
+func printLastCharacterIntString(_ input:String) -> Character {
+    let lastIndex = input.index(before: input.endIndex)
+    return input[lastIndex]
+}
+print(printLastCharacterIntString("Hello World, how are you"))
+
 
 func replaceCharacters(_ input:String) -> String {
     var replacedString = ""

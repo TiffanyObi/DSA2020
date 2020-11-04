@@ -89,11 +89,7 @@ func findPalindromString(_ input:String) -> Bool {
         reversedString.insert(char, at: reversedString.startIndex)
     }
     
-    if reversedString == input {
-        return true
-    }
-    
-    return false
+    return reversedString == input
 }
 
 let str1 = "anutforajaroftuna" // should be true
@@ -122,7 +118,6 @@ func findLongestWordInString(_ input:String) -> String {
     
     for word in wordArray {
         if longestString.count < word.count {
-           
             longestString = word
         }
     }

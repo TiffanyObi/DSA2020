@@ -5,5 +5,8 @@
         <page name='ArraysLesson'/>
         <page name='StringsLesson'/>
         <page name='DictionariesLesson'/>
+        <page name='bubbleSort'/>
+        <page name='InsertionSort'/>
+        <page name='QuickSort'/>
     </pages>
 </playground>

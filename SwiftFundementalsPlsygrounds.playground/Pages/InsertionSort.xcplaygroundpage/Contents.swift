@@ -4,6 +4,7 @@ import Foundation
 
 var str = "Hello, playground"
 
+//runtime is O(n^2)
 
 func insertionSort(_ arr: inout [Int]){
     for current in 1..<arr.count {

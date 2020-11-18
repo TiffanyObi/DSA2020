@@ -4,59 +4,36 @@ import Foundation
 
 var str = "Hello, playground"
 
-//Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
-//
-//An input string is valid if:
-//
-//Open brackets must be closed by the same type of brackets.
-//Open brackets must be closed in the correct order.
+/*Input: [3,2,1,5,6,4] and k = 2
+Output: 5
+Example 2:
 
-func isValid(_ s: String) -> Bool {
-   var counter = 0
-    var sArray = [Character]()
-    
-    for symbol in s {
-        switch symbol {
-            case "(":
-            counter += 1
-           sArray.append(symbol)
-            case ")":
-            if sArray.last == "(" {
-             counter -= 1
-                sArray.popLast()
-            } else {
-                return false
-            }
-            case "{":
-            counter += 1
-            sArray.append(symbol)
-            case "}":
-            if sArray.last == "{" {
-           counter -= 1
-            sArray.popLast()
-            } else {
-                return false
-            }
-            case "[":
-            counter += 1
-            sArray.append(symbol)
-            case "]":
-            if sArray.last == "["{
-            counter -= 1
-            sArray.popLast()
-            }else {
-                return false
-            }
-            
-            default:
-            print("sorry wrong symbol")
-        }
-    }
-    
-    if counter != 0 {
-        return false
-    }
-    
-    return true
+[6, 5, 4, 3, 2, 1]
+
+Input: ([3,2,3,1,2,4,5,5,6]) and k = 4
+Output: 4
+
+[6, 5, 5, 4, 3, 2, 2, 1]
+
+Note:
+You may assume k is always valid, 1 ≤ k ≤ array's length.
+*/
+
+/*
+
+array - sort it . reverse decending. then return the kth element which would be the (k-1)th index
+ 
+[1,2,2,3,3,4,5,5,6]
+[6,5,5,4,3,3,2,2,1]
+[2,3,4,5,6]
+*/
+
+
+func fourthLargest(_ arr: [Int], _ k:Int) -> Int {
+  guard !arr.isEmpty else { return 0 }
+  let sorttedArray = arr.sorted{$0 > $1}
+  return sorttedArray[k - 1]
 }
 
+print(fourthLargest([3,2,3,1,2,4,5,5,6], 4))
+print(fourthLargest([3,2,1,5,6,4], 2))

@@ -3,7 +3,8 @@
 import Foundation
 
 var str = "Hello, playground"
-
+//runtime = (n log n)
+// user lomutos partitioning to use the pivot to divide the array into smaller arrays
 /*
  Steps of Lomuto's Partioninong
  1. use the last element as the pivot
@@ -15,12 +16,13 @@ var str = "Hello, playground"
  */
 
 func lumotoPartioning(_ arr: inout [Int], low:Int, high:Int) -> Int {
-    let i = low
+    var i = low
     let pivot = arr[high]
     
     for j in low..<high {
         if arr[j] <= pivot {
             arr.swapAt(i,j)
+            i += 1
         }
     }
     
@@ -28,7 +30,7 @@ func lumotoPartioning(_ arr: inout [Int], low:Int, high:Int) -> Int {
     return i
 }
 
-var inputArr = [2,3,0,-5,1,-10]
+var inputArr = [2,3,0,-5,1,-10,4]
 
 print(inputArr)
 

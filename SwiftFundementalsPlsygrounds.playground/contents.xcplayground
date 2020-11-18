@@ -8,5 +8,6 @@
         <page name='bubbleSort'/>
         <page name='InsertionSort'/>
         <page name='QuickSort'/>
+        <page name='SetsLesson'/>
     </pages>
 </playground>

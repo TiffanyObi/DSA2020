@@ -8,6 +8,8 @@ var str = "Hello, playground"
 // 2 parts
 
 //divide and conquer
+// runtime is (n log n)
+
 //mergeSort using recurssion
 
 // 2 parts to a recurssive function

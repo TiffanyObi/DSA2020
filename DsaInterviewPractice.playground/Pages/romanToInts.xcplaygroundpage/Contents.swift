@@ -74,4 +74,4 @@ func romanToInt(_ s: String) -> Int {
        }
    return number
            }
-print(romanToInt("MMCMXCIV"))
+print(romanToInt("IV"))

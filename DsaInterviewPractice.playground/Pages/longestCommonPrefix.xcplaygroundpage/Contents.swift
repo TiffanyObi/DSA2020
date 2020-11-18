@@ -32,4 +32,4 @@ func longestCommonPrefix(_ strs: [String]) -> String {
        return commonPrefix
    }
 
-longestCommonPrefix(["what","hysg"])
+longestCommonPrefix(["what","whysg"])
